@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://res.cloudinary.com/cloud1303/image/upload/v1694110823/C-1_dnksd0.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT ME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">LOCATION</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">CONTACT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag"></span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">Charu Varthana Sekar</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT ME</span></h5>
+    <p style="text-align: justify;"> I'm Charu Varthana Sekar, and I'm in my Final   semester in a master's program in computer science. Software development using components is something that greatly interests me. I became really interested in this topic throughout my undergrad and used HTML and CSS for a number of projects. In this course, I'm eager to learn more about component-based software development. By grasping the ideas and techniques covered in this session, I hope to increase my knowledge base, improve my CV, and do exceptionally well in upcoming interviews.
+    <p style="text-align: justify;"> I'm taking the Component-based Software Development course to improve my practical abilities in developing scalable and maintainable programs, broaden my knowledge of modular software design, and keep up with industry standards. Not only will this knowledge enhance my academic experience, but it will also greatly increase my chances of finding employment in the future and advancing my career.
+    </p>
+</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i></i></p>
+      <p></p>
+    </div>
+    
+    <p><strong>Name:</strong> Charu Varthana Sekar.</p>
+    <p><strong>G(Number):</strong> G01381855 </p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">LOCATION</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+      <div class="w3-col tablink">Address:4400 University Drive, Fairfax, Virginia 22030 </div>
+      </a>
+    </div>
+
+    
+    <img src="https://res.cloudinary.com/cloud1303/image/upload/v1694110837/C-2_pnajhq.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT</span></h5>
+    <p>Phone number:2408053404</p>
+    <p>Email:charuvarthana@gmail.com</p>
+    <a href="survey.html" class="w3-button w3-block w3-black" style="text-decoration: none;color: black;" class="col p-2"> Student Survey Form</a>
+    
+    
+    
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
